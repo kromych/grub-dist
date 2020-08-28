@@ -12,8 +12,6 @@
 /* Define to 1 to enable disk cache statistics.  */
 #define DISK_CACHE_STATS 0
 #define BOOT_TIME_STATS 0
-/* Define to 1 to make GRUB quieter at boot time.  */
-#define QUIET_BOOT 1
 
 /* We don't need those.  */
 #define MINILZO_CFG_SKIP_LZO_PTR 1
@@ -25,8 +23,8 @@
 
 #if defined (GRUB_BUILD)
 #undef ENABLE_NLS
-#define BUILD_SIZEOF_LONG 8
-#define BUILD_SIZEOF_VOID_P 8
+#define BUILD_SIZEOF_LONG 4
+#define BUILD_SIZEOF_VOID_P 4
 #if defined __APPLE__
 # if defined __BIG_ENDIAN__
 #  define BUILD_WORDS_BIGENDIAN 1
@@ -51,9 +49,9 @@
 /* Version number of package.  */
 #define VERSION "2.04"
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "GRUB 2.04-1ubuntu26"
+#define PACKAGE_STRING "GRUB 2.04"
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.04-1ubuntu26"
+#define PACKAGE_VERSION "2.04"
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "GRUB"
 /* Define to the address where bug reports for this package should be sent. */
@@ -61,6 +59,7 @@
 
 #define GRUB_TARGET_CPU "i386"
 #define GRUB_PLATFORM "pc"
+#define GRUB_RPM_VERSION ""
 
 #define RE_ENABLE_I18N 1
 

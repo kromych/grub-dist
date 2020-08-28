@@ -1,6 +1,10 @@
 *acpi: acpi
 *all_functional_test: functional_test
 *background_image: gfxterm_background
+*bls_import: blscfg
+*blscfg: blscfg
+*btrfs-get-default-subvol: btrfs
+*btrfs-list-subvols: btrfs
 *cat: cat
 *cpuid: cpuid
 *crc: hashsum
@@ -50,7 +54,6 @@
 *sha256sum: hashsum
 *sha512sum: hashsum
 *sleep: sleep
-*smbios: smbios
 *submenu: normal
 *syslinux_configfile: syslinuxcfg
 *syslinux_source: syslinuxcfg
@@ -63,7 +66,6 @@
 *xnu_splash: xnu
 *zfskey: zfscrypt
 .: configfile
-915resolution: 915resolution
 [: test
 authenticate: normal
 background_color: gfxterm_background
@@ -72,6 +74,8 @@ badram: mmap
 blocklist: blocklist
 boot: boot
 break: normal
+btrfs-info: btrfs
+btrfs-mount-subvol: btrfs
 cat: minicmd
 cbmemc: cbmemc
 chainloader: chain
@@ -86,6 +90,7 @@ continue: normal
 coreboot_boottime: cbtime
 cutmem: mmap
 date: date
+decrement: increment
 distrust: pgp
 dump: minicmd
 efiemu_loadcore: efiemu
@@ -106,8 +111,8 @@ gdbstub_stop: gdb
 gptsync: gptsync
 help: minicmd
 hexdump_random: random
-hwmatch: hwmatch
-initrd16: linux16
+increment: increment
+initrd16: linux
 initrd: linux
 keymap: keylayouts
 kfreebsd_loadenv: bsd
@@ -123,7 +128,7 @@ legacy_initrd_nounzip: legacycfg
 legacy_kernel: legacycfg
 legacy_password: legacycfg
 legacy_source: legacycfg
-linux16: linux16
+linux16: linux
 linux: linux
 list_trusted: pgp
 loadfont: font
@@ -168,6 +173,7 @@ play: play
 pxechainloader: pxechain
 read: read
 reboot: reboot
+reset: reboot
 return: normal
 rmmod: minicmd
 search.file: search_fs_file
@@ -186,6 +192,7 @@ truecrypt: truecrypt
 usb: usbtest
 vbeinfo: videoinfo
 vbetest: videotest
+version: version
 videoinfo: videoinfo
 videotest: videotest
 write_byte: memrw

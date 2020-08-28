@@ -1,6 +1,10 @@
 *acpi: acpi
 *all_functional_test: functional_test
 *background_image: gfxterm_background
+*bls_import: blscfg
+*blscfg: blscfg
+*btrfs-get-default-subvol: btrfs
+*btrfs-list-subvols: btrfs
 *cat: cat
 *cpuid: cpuid
 *crc: hashsum
@@ -46,7 +50,6 @@
 *sha256sum: hashsum
 *sha512sum: hashsum
 *sleep: sleep
-*smbios: smbios
 *submenu: normal
 *syslinux_configfile: syslinuxcfg
 *syslinux_source: syslinuxcfg
@@ -68,6 +71,8 @@ badram: mmap
 blocklist: blocklist
 boot: boot
 break: normal
+btrfs-info: btrfs
+btrfs-mount-subvol: btrfs
 cat: minicmd
 cbmemc: cbmemc
 chainloader: chain
@@ -78,8 +83,11 @@ continue: normal
 coreboot_boottime: cbtime
 cutmem: mmap
 date: date
+decrement: increment
 distrust: pgp
 dump: minicmd
+efi-export-env: efienv
+efi-load-env: efienv
 eval: eval
 exit: minicmd
 export: normal
@@ -95,9 +103,9 @@ gptsync: gptsync
 halt: halt
 help: minicmd
 hexdump_random: random
-initrd16: linux16
+increment: increment
 initrd: linux
-initrdefi: linuxefi
+initrdefi: linux
 keymap: keylayouts
 kfreebsd_loadenv: bsd
 kfreebsd_module: bsd
@@ -112,9 +120,8 @@ legacy_initrd_nounzip: legacycfg
 legacy_kernel: legacycfg
 legacy_password: legacycfg
 legacy_source: legacycfg
-linux16: linux16
 linux: linux
-linuxefi: linuxefi
+linuxefi: linux
 list_trusted: pgp
 loadbios: loadbios
 loadfont: font
@@ -142,6 +149,12 @@ net_del_addr: net
 net_del_dns: net
 net_del_route: net
 net_dhcp: net
+net_efi_add_addr: efi_netfs
+net_efi_bootp6: efi_netfs
+net_efi_bootp: efi_netfs
+net_efi_ls_addr: efi_netfs
+net_efi_ls_cards: efi_netfs
+net_efi_ls_routes: efi_netfs
 net_get_dhcp_option: net
 net_ipv6_autoconf: net
 net_ls_addr: net
@@ -160,6 +173,7 @@ password_pbkdf2: password_pbkdf2
 play: play
 read: read
 reboot: reboot
+reset: reboot
 return: normal
 rmmod: minicmd
 search.file: search_fs_file
@@ -175,6 +189,7 @@ testload: testload
 time: time
 true: true
 usb: usbtest
+version: version
 videoinfo: videoinfo
 videotest: videotest
 write_byte: memrw
